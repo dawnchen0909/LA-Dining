@@ -1,0 +1,7 @@
+<!-- favorites_list.html -->
+<ul>
+    {% for favorite in favorites %}
+    <li>{{ favorite.restaurant_name }} - {{ favorite.note }}</li>
+    <!-- Add delete link or button -->
+    {% endfor %}
+</ul>

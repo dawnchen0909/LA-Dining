@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ratings for {{ restaurant.restaurantName }}</title>
+</head>
+<body>
+    <h2>Ratings for {{ restaurant.restaurantName }}</h2>
+    <ul>
+        {% for rating in ratings %}
+            <li>Score: {{ rating.score }} - Comment: {{ rating.comment }}</li>
+        {% empty %}
+            <li>No ratings yet.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

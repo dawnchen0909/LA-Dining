@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ restaurant.restaurantName }}</title>
+</head>
+<body>
+    <h2>{{ restaurant.restaurantName }}</h2>
+    <p>Address: {{ restaurant.address }}</p>
+    <p>Style: {{ restaurant.style }}</p>
+    <p>Price Range: {{ restaurant.price }}</p>
+    <p>ZIP: {{ restaurant.zip }}</p>
+    <a href="{% url 'restaurant_ratings' restaurant.restaurantName %}">View Ratings</a>
+    <!-- <a href="{% url 'restaurant_ratings' restaurant_name=restaurant.restaurantName %}">View Ratings</a> -->
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+<!-- your_template.html -->
+
+<h2>Favorites</h2>
+<ul>
+    {% for user in users %}
+
+    <li>{{ user.userName }} -> {{user.userID}}</li>
+    {% endfor %}
+</ul>

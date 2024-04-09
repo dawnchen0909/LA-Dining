@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurants List</title>
+</head>
+<body>
+    <h2>Restaurants:</h2>
+<!-- 
+    {% comment %} <form method="get">
+        Price: <input type="text" name="price" value="{{ form.price.value }}">
+        ZIP: <input type="text" name="zip" value="{{ form.zip.value }}">
+        Style: <input type="text" name="style" value="{{ form.style.value }}">
+        <input type="submit" value="Filter">
+    </form> {% endcomment %}
+
+    <form method="get">
+        Price:
+        <select name="price">
+            {% for value, display in form.price.field.choices %}
+                <option value="{{ value }}" {% if form.price.value == value %}selected{% endif %}>{{ display }}</option>
+            {% endfor %}
+        </select>
+    
+        ZIP:
+        <select name="zip">
+            {% for value, display in form.zip.field.choices %}
+                <option value="{{ value }}" {% if form.zip.value == value %}selected{% endif %}>{{ display }}</option>
+            {% endfor %}
+        </select>
+    
+        Style:
+        <select name="style">
+            {% for value, display in form.style.field.choices %}
+                <option value="{{ value }}" {% if form.style.value == value %}selected{% endif %}>{{ display }}</option>
+            {% endfor %}
+        </select>
+    
+        <input type="submit" value="Filter">
+    </form> -->
+
+    <ul>
+        {% for restaurant in restaurants %}
+            <li>
+                <a href="{% url 'restaurant_detail' restaurant.restaurantName %}">
+                    {{ restaurant.restaurantName }}
+                </a>
+            </li>
+        {% empty %}
+            <li>No restaurants found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
